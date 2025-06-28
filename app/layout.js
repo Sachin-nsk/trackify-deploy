@@ -46,8 +46,8 @@ export default function RootLayout({ children }) {
             {/* Header */}
             <Header />
             
-            {/* Main Content */}
-            <main className="min-h-screen bg-background">
+            {/* Main Content with proper top padding */}
+            <main className="min-h-screen bg-background pt-20">
               {children}
             </main>
             

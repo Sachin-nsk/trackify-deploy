@@ -19,7 +19,7 @@ const HeroSection = () => {
   ];
 
   return (
-    <div className='relative min-h-screen flex items-center justify-center overflow-hidden'>
+    <div className='relative min-h-screen flex items-center justify-center overflow-hidden pt-20'>
       {/* Background Elements */}
       <div className="absolute inset-0 bg-gradient-to-br from-emerald-50/50 via-background to-teal-50/50 dark:from-emerald-950/20 dark:via-background dark:to-teal-950/20" />
       

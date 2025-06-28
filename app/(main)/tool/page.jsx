@@ -66,24 +66,33 @@ const toolItems = [
 
 const ToolsPage = () => {
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 p-6">
-      {toolItems.map((tool, index) => (
-        <Card key={index} className="hover:shadow-md transition-shadow group relative">
-          <Link href={tool.href} className="block p-4">
-            <CardHeader className="flex items-center justify-between space-y-0 pb-2">
-              <div className="flex items-center gap-2">
-                {tool.icon}
-                <CardTitle className="text-base font-semibold">{tool.title}</CardTitle>
-              </div>
-            </CardHeader>
-            <CardContent>
-              <CardDescription className="text-sm text-muted-foreground">
-                {tool.description}
-              </CardDescription>
-            </CardContent>
-          </Link>
-        </Card>
-      ))}
+    <div className="container mx-auto px-4 py-8">
+      <div className="mb-8">
+        <h1 className="text-4xl font-bold gradient-title mb-4">Financial Tools</h1>
+        <p className="text-muted-foreground text-lg">
+          Powerful calculators to help you plan and optimize your financial decisions
+        </p>
+      </div>
+      
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        {toolItems.map((tool, index) => (
+          <Card key={index} className="hover:shadow-md transition-shadow group relative">
+            <Link href={tool.href} className="block p-4">
+              <CardHeader className="flex items-center justify-between space-y-0 pb-2">
+                <div className="flex items-center gap-2">
+                  {tool.icon}
+                  <CardTitle className="text-base font-semibold">{tool.title}</CardTitle>
+                </div>
+              </CardHeader>
+              <CardContent>
+                <CardDescription className="text-sm text-muted-foreground">
+                  {tool.description}
+                </CardDescription>
+              </CardContent>
+            </Link>
+          </Card>
+        ))}
+      </div>
     </div>
   );
 };
